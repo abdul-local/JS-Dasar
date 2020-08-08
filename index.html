@@ -9,20 +9,27 @@
    <h2>Travel Destination</h2>
    <p>plan your next adventure</p>
    <ul id="destination">
-      <li class="amerika">Rome</li>
+      <li>Rome</li>
       <li>Paris</li>
-      <li class="promo">rio</li>
+      <li>rio</li>
        
    </ul>
+   
+   <button>aksi</button>
    
    
     <script src="jquery-3.5.1.min.js"></script>
     
      <script>  
          $(document).ready(function(){
-             console.log("jquery sudah jalan ");
+            $("button").click(function(){
+                $("li").text("indonesia");
+                $("p").hide();
+                $("#destination").text("kalimantan,papua or lombok ?");
+            });
+             
          });
-         $(".amerika").text("amerika");
+        
     </script>
 </body>
 </html>
