@@ -14,13 +14,16 @@
       <ul class="jatim">
           <li class="jakpus">jakarta pusat
           <button id="kejakpus">pergi</button>
+          <button id="hide">Hide</button>
           <button id="hapusjp">hapus</button>
+           <button id="hidet">Toggle</button>
           
           </li>
           
           <li class="jaktim">jakarta timur</li>
           <li class="jaksel">jakarrta selatan</li>
           <li class="jakbar">jakarta Barat </li>
+          
       </ul>
        <li class="surabaya"><strong>Surabaya</strong></li>
        <li>bali</li>
@@ -30,7 +33,7 @@
        </li>
    </ul>
    
-   <button>aksi</button>
+  
    
    
     <script src="./jquery-3.5.1.min.js"></script>
@@ -47,7 +50,24 @@
                 
                 
             });
+            $("#hidet").on('click',function(){
+                //menggunkan animasi fadeOut
+//                $(".jakpus").fadeOut(2000);
+                //menggunakan animasi slideUp
+                   
+//                $(".jakpus").slideUp(2000);
+                
+                
+//                $(".jakpus").slideToggle();
+                //membuat animate tersendiri
+                $(".jakpus").animate({
+                    marginBottom:200
+                });
             
+        
+                
+                
+            });
             
              
          });
