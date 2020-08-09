@@ -5,21 +5,24 @@
     <title>Documen Object Model</title>
 </head>
 <body>
-   <h1>Where do you whant to go?</h1>
-   <h2>Travel Destination</h2>
-   <p>plan your next adventure</p>
+   <h1>Kemana Kamu ingin pergi ?</h1>
+   <h2 class="pilihan">Temukan tempat destination pilihan mu</h2>
+   <p class="lombok">Semoga menemukan tempat yang terindah yang kami sediakan</p>
    <ul id="destination">
-      <li>Bandung</li>
+      <li class="cimahi">Bandung</li>
       <li>Jakarta</li>
-      <ul>
+      <ul class="jatim">
           <li>jakarta pusat</li>
-          <li class="jatim">jakarta timur</li>
+          <li>jakarta timur</li>
           <li>jakarrta selatan</li>
           <li>jakarta Barat </li>
       </ul>
-       <li>Surabya</li>
+       <li class="surabaya"><strong>Surabaya</strong></li>
        <li>bali</li>
        <li id="lombok">Lombok</li>
+       <li>
+           <input type="text" class="angka" value="100">
+       </li>
    </ul>
    
    <button>aksi</button>
@@ -30,27 +33,53 @@
      <script>  
          $(document).ready(function(){
             $("button").click(function(){
+            
+                var price=$("<p> from 9,9 USD </p>");
+                //penggunaan before
                 
-                //mendai element untuk list saja
-//                $("#destination li").css("background-color","yellow");
-                //elemet lebih dari saru
-//                $(".jatim ,#lombok").css("background-color","yellow");
-                //memilih element pertama or terakhir
-                //memilih element pertama
-//             $("#destination li:first").css("background-color","green");
+              // $(".jatim ").before(price);
+                //penggunaan inserbefore
+//                price.insertBefore($(".lombok"));
                 
-                //memilih element trakhir
-                 //$("#destination li:last").css("background-color","red");
-                //memilih element ganil or genap
-//                $("#destination li:odd").css("background-color","red");
-//                $("#destination li:even").css("background-color","yellow");
-                // menggunakan fungsi traversing
-//                $("li").first().css("background-color","blue");
-//                
+                // penggunan after
+                price.insertAfter($(".lombok"));
                 
-                //menggunkan fungsi children
-                $("#destination").children("li").css("background-color","greenyellow");
+                //var lombok=$("<p> Lombok Adalah pulau yang sangat indah di indonesia </p>");
                 
+                //$(".lombok").after(lombok);
+                
+                //penggunaan fungsi append
+//              $(".jatim ").append(price);
+                
+                //penggunaan fungsi prepend
+//               $(".jatim ").prepend(price);
+                
+                
+//                var lokasi =$("<h2>Ayok segera pilih Lokasi tempat favoritemu </h2>");
+//                $(".pilihan").before(lokasi);
+                //menampilkan dalam bentuk HTML
+                
+              console.log($(".surabaya").html());
+                
+                //menampilkan dalam bentuk Text
+                                
+            //console.log($(".surabaya").text());
+                
+                //menampilkan berdasarkan value
+                
+//                console.log($(".angka").val());
+                //mengganti angka dan nilai 
+//                $(".cimahi").text("cimahi");
+//                $(".surabaya").html("<em> surabaya </em> ");
+//                $(".angka").val(150);
+                
+                // remove bandung
+                
+//                $(".cimahi").remove();
+                
+                // mengosongkan surabaya
+                
+//                $(".surabaya").empty();
                 
             });
              
