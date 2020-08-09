@@ -11,28 +11,31 @@
          
           <div class="your-class">
           <div><h1>Berita 1</h1>
-          <img src="https://cf.shopee.co.id/file/859bf935f66cdfdbef3775c7cd4b55b5" alt="">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facilis neque dignissimos et iure autem quod porro pariatur doloribus voluptatem, cum temporibus voluptate necessitatibus obcaecati quos, voluptates ipsam dolorum debitis.
-          
           </div>
           <div><h1>Berita 2</h1>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto rerum dolores quibusdam, ipsa distinctio sit obcaecati quos saepe eveniet ab dignissimos impedit, consequuntur repellendus alias accusantium voluptas minus, in quam.
           </div>
           
           <div><h1>Berita 3</h1>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero iusto assumenda doloribus error possimus ipsam voluptatum vel similique. Nam earum odio sit provident, in, consectetur nihil ab quibusdam tenetur non.
-          
           </div>
           
+        </div>
+        
+        <button class="mypopup_open">Open popup</button>
+          <div id="mypopup">
+            ini adalah pop up, bisa diisi dengan detai berita, detail gambar atau konten lain
+            <button class="mypopup_close">Close</button>
         </div>
    
     <script src="./jquery-3.5.1.min.js"></script>
      <script type="text/javascript" src="slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
+     <script type="text/javascript" src="jquery-popup-overlay-gh-pages/jquery-popup-overlay/jquery.popupoverlay.js"></script>
      <script type="text/javascript">  
          $(document).ready(function(){
         $('.your-class').slick({
+            
    
-        });   
+        }); 
+        $("#mypopup").popup();
          });
         
     </script>
