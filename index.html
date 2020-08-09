@@ -4,67 +4,35 @@
     <meta charset="UTF-8">
     <title>Documen Object Model</title>
     <Link href="style.css" rel="stylesheet" typ="text/css"></Link>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick-1.8.1/slick/slick-theme.css">
 </head>
 <body>
-   <h1>Kemana Kamu ingin pergi ?</h1>
-   <h2 class="pilihan">Temukan tempat destination pilihan mu</h2>
-   <p class="lombok">Semoga menemukan tempat yang terindah yang kami sediakan</p>
-   <ul id="destination">
-      <li class="cimahi">Bandung</li>
-      <li>Jakarta</li>
-      <ul class="jatim">
-          <li class="jakpus">jakarta pusat
-           <button id="red">jadi merah</button>
-           <button id="blue">jadi biru </button>
-           <button id="jadibesar">Jadi Besar </button>
-          </li>
-          <li class="jaktim">jakarta timur
-          </li>
-          <li class="jaksel">jakarrta selatan</li>
-          <li class="jakbar">jakarta Barat </li>
+         
+          <div class="your-class">
+          <div><h1>Berita 1</h1>
+          <img src="https://cf.shopee.co.id/file/859bf935f66cdfdbef3775c7cd4b55b5" alt="">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facilis neque dignissimos et iure autem quod porro pariatur doloribus voluptatem, cum temporibus voluptate necessitatibus obcaecati quos, voluptates ipsam dolorum debitis.
           
-      </ul>
-       <li class="surabaya"><strong>Surabaya</strong></li>
-       <li>bali</li>
-       <li id="lombok">Lombok</li>
-       <li>
-           <input type="text" class="angka" value="100">
-       </li>
-   </ul>
-   
-  
-   
+          </div>
+          <div><h1>Berita 2</h1>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto rerum dolores quibusdam, ipsa distinctio sit obcaecati quos saepe eveniet ab dignissimos impedit, consequuntur repellendus alias accusantium voluptas minus, in quam.
+          </div>
+          
+          <div><h1>Berita 3</h1>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero iusto assumenda doloribus error possimus ipsam voluptatum vel similique. Nam earum odio sit provident, in, consectetur nihil ab quibusdam tenetur non.
+          
+          </div>
+          
+        </div>
    
     <script src="./jquery-3.5.1.min.js"></script>
-    
-     <script>  
+     <script type="text/javascript" src="slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
+     <script type="text/javascript">  
          $(document).ready(function(){
-             
-             $("#red").on('click',function(){
-            $(".jakpus").removeClass("biru");
-            $(".jakpus").addClass("merah");
-                 
-             });
-             
-            $("#blue").on('click',function(){
-            $(".jakpus").removeClass("merah");
-            $(".jakpus").addClass("biru");
-                 
-             });
-             
-             $("#jadibesar").on('click', function(){
-                 
-                 $(".jakpus").animate({
-                     
-                     fontSize:100
-                 });
-             });
-             
-             
-           
-    
-           
-             
+        $('.your-class').slick({
+   
+        });   
          });
         
     </script>
