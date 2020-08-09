@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Documen Object Model</title>
+    <Link href="style.css" rel="stylesheet" typ="text/css"></Link>
 </head>
 <body>
    <h1>Kemana Kamu ingin pergi ?</h1>
@@ -13,14 +14,12 @@
       <li>Jakarta</li>
       <ul class="jatim">
           <li class="jakpus">jakarta pusat
-          <button id="kejakpus">pergi</button>
-          <button id="hide">Hide</button>
-          <button id="hapusjp">hapus</button>
-           <button id="hidet">Toggle</button>
-          
+           <button id="red">jadi merah</button>
+           <button id="blue">jadi biru </button>
+           <button id="jadibesar">Jadi Besar </button>
           </li>
-          
-          <li class="jaktim">jakarta timur</li>
+          <li class="jaktim">jakarta timur
+          </li>
           <li class="jaksel">jakarrta selatan</li>
           <li class="jakbar">jakarta Barat </li>
           
@@ -40,35 +39,31 @@
     
      <script>  
          $(document).ready(function(){
-           $("#kejakpus").on('click',function(){
-               
-               alert("saya suka ke Monas jakrta Puat");
-           });
-            $("#hapusjp").on('click',function(){
-                $(".jakpus").remove();
-                alert("jakarta pusat udah di hapus");
-                
-                
-            });
-            $("#hidet").on('click',function(){
-                //menggunkan animasi fadeOut
-//                $(".jakpus").fadeOut(2000);
-                //menggunakan animasi slideUp
-                   
-//                $(".jakpus").slideUp(2000);
-                
-                
-//                $(".jakpus").slideToggle();
-                //membuat animate tersendiri
-                $(".jakpus").animate({
-                    marginBottom:200
-                });
-            
-        
-                
-                
-            });
-            
+             
+             $("#red").on('click',function(){
+            $(".jakpus").removeClass("biru");
+            $(".jakpus").addClass("merah");
+                 
+             });
+             
+            $("#blue").on('click',function(){
+            $(".jakpus").removeClass("merah");
+            $(".jakpus").addClass("biru");
+                 
+             });
+             
+             $("#jadibesar").on('click', function(){
+                 
+                 $(".jakpus").animate({
+                     
+                     fontSize:100
+                 });
+             });
+             
+             
+           
+    
+           
              
          });
         
